@@ -28,6 +28,6 @@ export class PlanetCalendar {
   }
 
   getAgeOnPlanet(earthYearAge) {
-
+    return earthYearAge / this.yearLength;
   }
 }

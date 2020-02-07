@@ -12,6 +12,7 @@ const planetNames = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "
 const yearLengths = [mercuryYear, venusYear, earthYear, marsYear, jupiterYear, saturnYear, uranusYear, neptuneYear];
 
 const earthDaysInYear = 365.2564;
+const lifeExpectancy = 72.6;
 
 export class PlanetCalendar {
   constructor(planetName, yearLength) {
@@ -21,6 +22,10 @@ export class PlanetCalendar {
 
   getAgeOnPlanet(earthYearAge) {
     return earthYearAge / this.yearLength;
+  }
+
+  getLifeExpectancyLeft(earthYearAge) {
+    
   }
 }
 

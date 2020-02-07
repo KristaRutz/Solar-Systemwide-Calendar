@@ -9,17 +9,15 @@ describe("Planet Calendar Class", () => {
   })
 
   test("should correctly construct a planet calendar object", () => {
-    //const pluto = new PlanetCalendar("Pluto", 248);
     expect(pluto.planetName).toEqual("Pluto");
     expect(pluto.yearLength).toEqual(248);
     expect(pluto).toEqual({planetName: "Pluto", yearLength: 248});
   })
   test("should accept a length of time in earth years and correctly return it in x planet years", () => {
-    //const pluto = new PlanetCalendar("Pluto", 248);
     expect(pluto.getAgeOnPlanet(248)).toEqual(1);
   })
   test("should return the user's remaining life expectancy on a given planet", () => {
-    //const
+    expect(pluto.getLifeExpectancyLeft(25)).toEqual("0.3 years left");
   })
 }) 
 

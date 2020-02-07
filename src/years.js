@@ -30,7 +30,10 @@ export class PlanetCalendar {
 
   getLifeExpectancyLeft(earthYearAge) {
     let earthYearsRemaining = lifeExpectancy - earthYearAge;
-    return this.convertToPlanetYears(earthYearsRemaining).toFixed(2) + " years left";
+    if (earthYearsRemaining >= 0){
+      return this.convertToPlanetYears(earthYearsRemaining).toFixed(2) + " more years expected";
+    } else return Math.abs(this.convertToPlanetYears(earthYearsRemaining).toFixed(2)) + " past life expectancy";
+
   }
 }
 
@@ -68,5 +71,9 @@ export class SolarSystemCalendar {
       }
     }
     return ageList;
+  }
+
+  getLifeExpectancyList(earthYearAge){
+    return "";
   }
 }

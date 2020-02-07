@@ -8,6 +8,9 @@ const saturnYear = 29.456;
 const uranusYear = 84.0205;
 const neptuneYear = 164.8;
 
+const planetNames = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+const yearLengths = [mercuryYear, venusYear, earthYear, marsYear, jupiterYear, saturnYear, uranusYear, neptuneYear];
+
 const earthDaysInYear = 365.2564;
 
 export class PlanetCalendar {

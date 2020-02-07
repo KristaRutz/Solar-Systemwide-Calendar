@@ -19,6 +19,9 @@ describe("Planet Calendar Class", () => {
 describe("Solar System Calendar Class", () => {
   test("should construct an object that contains an array of planet calendar objects for all planets in our solar system", () => {
     const calendar = new SolarSystemCalendar();
+    expect(calendar.planetCalendars.length).toEqual(8);
     expect(calendar.planetCalendars[0]).toEqual({planetName: "Mercury", yearLength: .241});
+    expect(calendar.planetCalendars[0].planetName).toEqual("Mercury");
+    expect(calendar.planetCalendars[5].getAgeOnPlanet(25.3)).toEqual(25.3/29.456);
   })
 })

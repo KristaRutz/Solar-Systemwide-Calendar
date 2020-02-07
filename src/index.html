@@ -5,13 +5,26 @@
   </head>
   <body>
     <div class="container">
-      <h2>Solar System Calendar Converter</h2>
-      <form id="user-age">
-        <label for="age">Enter a number:</label>
-        <input id="age" type="number">
-        <button type="submit">Submit</button>
-      </form>
-      <ul id="output"></ul>
+      <div class="jumbotron">
+        <h2>Solar System Calendar Converter</h2>
+
+        <p>This ephemeris calculator converts time in Earth years to the number of years on all the planets in Earth's solar system based on how long each planet takes to orbit the sun. <strong>Enter your age</strong> to see how old you are on Mars, Venus, and more!</p>
+        <div id="user-age">
+          <label for="age">Enter a number:</label>
+          <input id="age" type="number">
+          <button type="submit">Go</button>
+        </div>
+        <p id="age-output"></p>
+
+        <p>You can also view your life expectancy on other planets. Impress your friends by telling them that you expect to live hundreds more years...on Mercury! <strong>Enter your age</strong> to see how old you are on Mercury, Venus, and more!</p>
+        <div id="user-life-expectancy">
+          <label for="age2">Enter a number:</label>
+          <input id="age2" type="number">
+          <button type="submit">Go</button>
+        </div>
+        <p id="age-output"></p>
+
+      </div>
     </div>
   </body>
 </html>

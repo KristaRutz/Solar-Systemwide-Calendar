@@ -20,12 +20,17 @@ export class PlanetCalendar {
     this.yearLength = yearLength;
   }
 
-  getAgeOnPlanet(earthYearAge) {
+  convertToPlanetYears(earthYearAge) {
     return earthYearAge / this.yearLength;
   }
 
+  static get lifeExpectancy() {
+    return 72.6;
+  }
+
   getLifeExpectancyLeft(earthYearAge) {
-    
+    let earthYearsRemaining = lifeExpectancy - earthYearAge;
+    return this.convertToPlanetYears(earthYearsRemaining).toFixed(2) + " years left";
   }
 }
 
@@ -48,9 +53,9 @@ export class SolarSystemCalendar {
     for (let i = 0; i < 8; i ++){
       let currentPlanet = this.planetCalendars[i];
       if (i<7){
-        ageList += `${currentPlanet.planetName}: ${currentPlanet.getAgeOnPlanet(earthYearAge).toFixed(2)}, `
+        ageList += `${currentPlanet.planetName}: ${currentPlanet.convertToPlanetYears(earthYearAge).toFixed(2)}, `
       } else {
-        ageList += `${currentPlanet.planetName}: ${currentPlanet.getAgeOnPlanet(earthYearAge).toFixed(2)}`
+        ageList += `${currentPlanet.planetName}: ${currentPlanet.convertToPlanetYears(earthYearAge).toFixed(2)}`
       }
     }
     return ageList;

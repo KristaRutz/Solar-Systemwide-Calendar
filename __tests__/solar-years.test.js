@@ -14,10 +14,10 @@ describe("Planet Calendar Class", () => {
     expect(pluto).toEqual({planetName: "Pluto", yearLength: 248});
   })
   test("should accept a length of time in earth years and correctly return it in x planet years", () => {
-    expect(pluto.getAgeOnPlanet(248)).toEqual(1);
+    expect(pluto.convertToPlanetYears(248)).toEqual(1);
   })
   test("should return the user's remaining life expectancy on a given planet", () => {
-    expect(pluto.getLifeExpectancyLeft(25)).toEqual("0.3 years left");
+    expect(pluto.getLifeExpectancyLeft(25)).toEqual("0.19 years left");
   })
 }) 
 
@@ -27,7 +27,7 @@ describe("Solar System Calendar Class", () => {
     expect(calendar.planetCalendars.length).toEqual(8);
     expect(calendar.planetCalendars[0]).toEqual({planetName: "Mercury", yearLength: .241});
     expect(calendar.planetCalendars[0].planetName).toEqual("Mercury");
-    expect(calendar.planetCalendars[5].getAgeOnPlanet(25.3)).toEqual(25.3/29.456);
+    expect(calendar.planetCalendars[5].convertToPlanetYears(25.3)).toEqual(25.3/29.456);
   })
   test("should take an age (in earth years) and return a string listing this timeframe on each planet in the solar system", () => {
     const calendar = new SolarSystemCalendar();

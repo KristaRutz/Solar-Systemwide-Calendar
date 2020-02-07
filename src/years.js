@@ -16,6 +16,18 @@ export class SolarSystemAge {
   }
 
   planetAge(planet){
-    return `${planet}`Year * this.earthyearAge;
+
+    return Year * this.earthyearAge;
+  }
+}
+
+export class PlanetCalendar {
+  constructor(planetName, yearLength) {
+    this.planetName = planetName;
+    this.yearLength = yearLength;
+  }
+
+  getAgeOnPlanet(earthYearAge) {
+
   }
 }

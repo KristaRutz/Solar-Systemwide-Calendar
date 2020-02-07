@@ -19,6 +19,10 @@ describe("Planet Calendar Class", () => {
   test("should return the user's remaining life expectancy on a given planet", () => {
     expect(pluto.getLifeExpectancyLeft(25)).toEqual("0.19 years left");
   })
+  test("should return the user's remaining life expectancy on earth", () => {
+    const earth = new PlanetCalendar("Earth", 1)
+    expect(earth.getLifeExpectancyLeft(25)).toEqual("47.60 years left");
+  })
 }) 
 
 describe("Solar System Calendar Class", () => {

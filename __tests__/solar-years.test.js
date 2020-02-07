@@ -10,9 +10,7 @@ describe("Planet Calendar Class", () => {
   })
   test("should accept a length of time in earth years and correctly return it in x planet years", () => {
     const pluto = new PlanetCalendar("Pluto", 248);
-    const earth = new PlanetCalendar("Earth", 1);
     expect(pluto.getAgeOnPlanet(248)).toEqual(1);
-    expect(earth.getAgeOnPlanet(25.3)).toEqual(25.3);
   })
 }) 
 
@@ -26,6 +24,6 @@ describe("Solar System Calendar Class", () => {
   })
   test("should take an age (in earth years) and return a string listing this timeframe on each planet in the solar system", () => {
     const calendar = new SolarSystemCalendar();
-    expect(calendar.printAgeList(50)).toEqual("Mars: 2000, Venus: 99, Earth: 50...")
+    expect(calendar.getAgeList(50)).toEqual("Mercury: 207.47, Venus: 81.27, Earth: 50.00, Mars: 26.58, Jupiter: 4.22, Saturn: 1.70, Uranus: 0.60, Neptune: 0.30")
   })
 })

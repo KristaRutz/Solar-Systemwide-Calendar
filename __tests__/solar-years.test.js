@@ -2,15 +2,24 @@ import { SolarSystemCalendar, PlanetCalendar } from "../src/years"
 
 
 describe("Planet Calendar Class", () => {
+  let pluto;
+
+  beforeEach(() => {
+    pluto = new PlanetCalendar("Pluto", 248);
+  })
+
   test("should correctly construct a planet calendar object", () => {
-    const pluto = new PlanetCalendar("Pluto", 248);
+    //const pluto = new PlanetCalendar("Pluto", 248);
     expect(pluto.planetName).toEqual("Pluto");
     expect(pluto.yearLength).toEqual(248);
     expect(pluto).toEqual({planetName: "Pluto", yearLength: 248});
   })
   test("should accept a length of time in earth years and correctly return it in x planet years", () => {
-    const pluto = new PlanetCalendar("Pluto", 248);
+    //const pluto = new PlanetCalendar("Pluto", 248);
     expect(pluto.getAgeOnPlanet(248)).toEqual(1);
+  })
+  test("should return the user's remaining life expectancy on a given planet", () => {
+    //const
   })
 }) 
 
@@ -26,4 +35,5 @@ describe("Solar System Calendar Class", () => {
     const calendar = new SolarSystemCalendar();
     expect(calendar.getAgeList(50)).toEqual("Mercury: 207.47, Venus: 81.27, Earth: 50.00, Mars: 26.58, Jupiter: 4.22, Saturn: 1.70, Uranus: 0.60, Neptune: 0.30")
   })
+  //test("should tell a user their life expectancy")
 })

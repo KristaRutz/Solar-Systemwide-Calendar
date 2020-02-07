@@ -1,4 +1,4 @@
-import { PlanetCalendar } from "../src/years"
+import { SolarSystemCalendar, PlanetCalendar } from "../src/years"
 
 
 describe("Planet Calendar Class", () => {
@@ -15,3 +15,10 @@ describe("Planet Calendar Class", () => {
     expect(earth.getAgeOnPlanet(25.3)).toEqual(25.3);
   })
 }) 
+
+describe("Solar System Calendar Class", () => {
+  test("should construct an object that contains an array of planet calendar objects for all planets in our solar system", () => {
+    const calendar = new SolarSystemCalendar();
+    expect(calendar.planetCalendars[0]).toEqual({planetName: "Mercury", yearLength: .241});
+  })
+})

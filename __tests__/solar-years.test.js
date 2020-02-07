@@ -24,4 +24,8 @@ describe("Solar System Calendar Class", () => {
     expect(calendar.planetCalendars[0].planetName).toEqual("Mercury");
     expect(calendar.planetCalendars[5].getAgeOnPlanet(25.3)).toEqual(25.3/29.456);
   })
+  test("should take an age (in earth years) and return a string listing this timeframe on each planet in the solar system", () => {
+    const calendar = new SolarSystemCalendar();
+    expect(calendar.printAgeList(50)).toEqual("Mars: 2000, Venus: 99, Earth: 50...")
+  })
 })

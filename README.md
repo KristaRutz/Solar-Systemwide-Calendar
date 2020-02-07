@@ -1,31 +1,47 @@
-# ICE CREAM PARLOR
+# Solar System Calendar Converter
 
-#### A website for an ice cream parlor, hosted on [GitHub Pages](https://kristarutz.github.io/Ice-Cream-Parlor/), where a user can choose one or more individual toppings (sprinkles, whipped cream, hot fudge, etc) and a size to order an ice cream and see the final cost.
+#### An application to convert between planetary years, hosted on [GitHub Pages](https://kristarutz.github.io/Solar-Systemwide-Calendar/), where a user can calculate their age on all of the planets in our solar system.
 
 
-### _By **Krista Rutz** Last updated January 31 2020_
+### _By **Krista Rutz**. Last updated February 7, 2020_
 
 ## Description
 
-This web application allows the user to choose between 7 types of ice cream treats, select from a menu of ten flavors, and add up to 7 toppings. It then calculates the cost of the order.
+This JavaScript application allows the user to convert time in Earth years to years on other planets, based on the speed of each planet's orbit of the sun in Earth years.
 
 ## Installation / Set-up
 
 This app is ready to run at this url:
-https://kristarutz.github.io/Ice-Cream-Parlor/
+https://kristarutz.github.io/Solar-Systemwide-Calendar/
 
-You can also download the ZIP file to run this program without internet.
-* Select "Clone or Download" on the [GitHub Repository](https://github.com/KristaRutz/Ice-Cream-Parlor.git) site > Download ZIP
-* Open the ZIP download and extract files.
-* The new folder will be created as "ice-cream-parlor" unless you change this setting. In this folder, select the index.html document.
+You can also download the repository to run this program locally.
+
+**Download ZIP:**
+
+* Select "Download" on the [GitHub Repository](https://github.com/KristaRutz/Solar-Systemwide-Calendar.git) site 
+* Download ZIP: Open the ZIP download and extract files. The new folder will be created as "Solar-Systemwide-Calendar"
+* In this folder, select the index.html document.
 * Choose "Open With" > Google Chrome or another browser of your choice.
 * The website is now ready to use!
 
+**Clone:**
+
+* Clone from command line: ```git clone https://github.com/KristaRutz/Solar-Systemwide-Calendar.git```
+* Install packages from command line:
+  * ```npm install```
+  * ```npm run build```
+  * ```npm run start```
+* Upon success, this will create a local server for the site which will reflect the current state of the program and accept user modifications.
+
 ## Technologies Used
 
-* JavaScript and jQuery
-* Custom CSS and responsive design using Bootstrap framework
-* HTML
+* **JavaScript** and **jQuery**
+* **Node.js** Package Manager
+  * **webpack** bundler
+  * **Jest** testing
+  * **ESLint**
+* Custom **CSS** and responsive design using Bootstrap framework
+* **HTML**
 
 ## Specifications
 <details>
@@ -33,30 +49,18 @@ You can also download the ZIP file to run this program without internet.
 
 | Spec | Example Input | Expected Output |
 | :-------------     | :------------- | :------------- |
-| User begins with an empty cart | "Example" | "Example" |
+| User begins with an empty form | "Example" | "Example" |
 | When user clicks on cart, the contents of the cart are displayed | click <kbd>View cart</kbd>| "nothing in the cart" message, <kbd>new</kbd> button |
-| Create input form for a new ice cream creation
 | User selects "new" ice cream creation | click <kbd>new</kbd> | new creation form appears |
 | User selects "Kid's Scoop" option | Size: <kbd>Kid's</kbd> | Price updates to $2.50 but user cannot add to cart |
-| User selects chocolate flavor | Flavor: <kbd>Chocolate</kbd> | Price remains $2.50 and user can add to cart |
-| User does not select any toppings | Toppings: <kbd>None</kbd> | Price remains $2.50 and user can add to cart |
-| User selects 1 topping | Toppings: <kbd>Sprinkles</kbd> | Price updates to $2.80 and user can add to cart |
 | User adds to cart | click <kbd>Add to cart</kbd> | Cart size increases to 1, form is reset, and <kbd>Add another creation</kbd> button appears |
-| When user clicks on cart, the contents of the cart are displayed | click <kbd>View cart</kbd>| "1 kid's scoop" message, price, total price, <kbd>checkout</kbd> button, <kbd>new</kbd> button |
-||||
-| User selects "Triple Scoop" option | Size: <kbd>Triple</kbd> | Price updates to $5 but user cannot add to cart |
-| User selects chocolate flavor | Flavor: <kbd>Chocolate</kbd> | Price remains $5 and user cannot add to cart - must select three flavors |
-| User selects chocolate, strawberry, vanilla flavor | Flavor: <kbd>Chocolate</kbd> <kbd>Strawberry</kbd> <kbd>Vanilla</kbd> | Price remains $5 and user can add to cart |
-| User does not select any toppings | Toppings: <kbd>None</kbd> | Price remains $5 and user can add to cart |
-| User selects 1 topping | Toppings: <kbd>Sprinkles</kbd> | Price updates to $5.30 and user can add to cart |
-| User adds a second item to cart | click <kbd>Add to cart</kbd> | Cart size increases to 2, form is reset, and <kbd>Add another creation</kbd> button appears |
-| When user clicks on cart, the contents of the cart are displayed | click <kbd>View cart</kbd>| "1 kid's scoop" message, price, "1 triple scoop" message, price, total price, <kbd>checkout</kbd> button, <kbd>new</kbd> button |
+
 
 </details>
 
 ## Known Bugs
 
-If treat type is changed while toppings are selected, the order may contain double toppings or toppings associated with the previous treat type.
+No known bugs.
 
 ## Support and contact details
 

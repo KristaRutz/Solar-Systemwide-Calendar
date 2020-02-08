@@ -29,7 +29,7 @@ export class PlanetCalendar {
     let earthYearsRemaining = lifeExpectancy - earthYearAge;
     if (earthYearsRemaining >= 0){
       return this.convertToPlanetYears(earthYearsRemaining).toFixed(2) + " more years expected";
-    } else return Math.abs(this.convertToPlanetYears(earthYearsRemaining).toFixed(2)) + " past life expectancy";
+    } else return Math.abs(this.convertToPlanetYears(earthYearsRemaining).toFixed(2)) + " years past life expectancy";
 
   }
 }

@@ -1,6 +1,7 @@
 body {
   background-image: url("./img/milkyway.jpg");
   height: 500px;
+  color: white;
 }
 
 .container {
@@ -8,5 +9,6 @@ body {
 }
 
 .jumbotron {
-  opacity: 90%;
+  opacity: 94%;
+  background-color: dimgray;
 }

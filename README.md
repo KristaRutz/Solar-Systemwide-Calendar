@@ -49,11 +49,17 @@ You can also download the repository to run this program locally.
 
 | Spec | Example Input | Expected Output |
 | :-------------     | :------------- | :------------- |
+| correctly construct a planet calendar | Pluto, 248 | {planetName: "Pluto", yearLength: 248} |
+|accept a length of time in earth years and correctly return it in x planet years| Pluto, 248 | 1 |
+| return the user's remaining life expectancy on a given planet | Pluto, Age 25 | 0.19 more years expected |
+| construct an object that contains an array of planet calendar objects for all planets in our solar system |||
+| Takes an age (in earth years) and return a string listing this timeframe on each planet in the solar system | 50 | "Mercury: 207.47, Venus: 81.27, Earth: 50.00, Mars: 26.58, Jupiter: 4.22, Saturn: 1.70, Uranus: 0.60, Neptune: 0.30" |
+| Tells a user their life expectancy on each planet in the solar system | 1 | On Mercury, 297.10 more years expected. On Venus, 116.38 more years expected. On Earth, 71.60 more years expected. On Mars, 38.07 more years expected. On Jupiter, 6.04 more years expected. On Saturn, 2.43 more years expected. On Uranus, 0.85 more years expected. On Neptune, 0.43 more years expected. |
+||||
 | User begins with an empty form | "Example" | "Example" |
-| When user clicks on cart, the contents of the cart are displayed | click <kbd>View cart</kbd>| "nothing in the cart" message, <kbd>new</kbd> button |
-| User selects "new" ice cream creation | click <kbd>new</kbd> | new creation form appears |
-| User selects "Kid's Scoop" option | Size: <kbd>Kid's</kbd> | Price updates to $2.50 but user cannot add to cart |
-| User adds to cart | click <kbd>Add to cart</kbd> | Cart size increases to 1, form is reset, and <kbd>Add another creation</kbd> button appears |
+| When user clicks <kbd>Go</kbd>, the list of ages on other planets appears | clicks <kbd>Go</kbd>| "Mercury: 0.00, Venus: 0.00, Earth: 0.00, Mars: 0.00, Jupiter: 0.00, Saturn: 0.00, Uranus: 0.00, Neptune: 0.00" |
+| When user enters age, list updates to reflect age | 1 | "Mercury: 4.15, Venus: 1.63, Earth: 1.00, Mars: 0.53, Jupiter: 0.08, Saturn: 0.03, Uranus: 0.01, Neptune: 0.01" |
+| User selects "Life Expectancy" option | clicks <kbd>Go</kbd> | "On Mercury, 263.90 more years expected. On Venus, 103.38 more years expected. On Earth, 63.60 more years expected. On Mars, 33.81 more years expected. On Jupiter, 5.36 more years expected. On Saturn, 2.16 more years expected. On Uranus, 0.76 more years expected. On Neptune, 0.39 more years expected." |
 
 
 </details>

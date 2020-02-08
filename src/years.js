@@ -8,9 +8,6 @@ const saturnYear = 29.456;
 const uranusYear = 84.0205;
 const neptuneYear = 164.8;
 
-//const planetNames = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
-//const yearLengths = [mercuryYear, venusYear, earthYear, marsYear, jupiterYear, saturnYear, uranusYear, neptuneYear];
-
 //const earthDaysInYear = 365.2564;
 const lifeExpectancy = 72.6;
 
@@ -36,15 +33,6 @@ export class PlanetCalendar {
 
   }
 }
-
-// const mercuryCal = new PlanetCalendar("Mercury", mercuryYear)
-// const venusCal = new PlanetCalendar("Venus", 0.6152)
-// const earthCal = new PlanetCalendar("Earth", 1)
-// const marsCal = new PlanetCalendar("Mars", marsYear);
-// const jupiterCal = new PlanetCalendar("Jupiter", 11.8618)
-// const saturnCal = new PlanetCalendar("Saturn", 29.456)
-// const uranusCal = new PlanetCalendar("Uranus", 84.0205)
-// const neptuneCal = new PlanetCalendar("Neptune", 164.8);
 
 export class SolarSystemCalendar {
   constructor(){
@@ -74,6 +62,11 @@ export class SolarSystemCalendar {
   }
 
   getLifeExpectancyList(earthYearAge){
-    return "";
+    let expectedList = ``;
+    for (let i = 0; i < 8; i ++){
+      let currentPlanet = this.planetCalendars[i];
+        expectedList += `On ${currentPlanet.planetName}, ${currentPlanet.getLifeExpectancyLeft(earthYearAge)}. `;
+    }
+    return expectedList;
   }
 }

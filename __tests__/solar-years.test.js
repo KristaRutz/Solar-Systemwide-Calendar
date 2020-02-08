@@ -38,6 +38,6 @@ describe("Solar System Calendar Class", () => {
     expect(calendar.getAgeList(50)).toEqual("Mercury: 207.47, Venus: 81.27, Earth: 50.00, Mars: 26.58, Jupiter: 4.22, Saturn: 1.70, Uranus: 0.60, Neptune: 0.30")
   })
   test("should tell a user their life expectancy on each planet in the solar system", () => {
-    expect(calendar.getLifeExpectancyList(10)).toEqual("");
+    expect(calendar.getLifeExpectancyList(1)).toEqual("On Mercury, 297.10 more years expected. On Venus, 116.38 more years expected. On Earth, 71.60 more years expected. On Mars, 38.07 more years expected. On Jupiter, 6.04 more years expected. On Saturn, 2.43 more years expected. On Uranus, 0.85 more years expected. On Neptune, 0.43 more years expected.");
   })
 })
